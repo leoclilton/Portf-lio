@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Máquina de Escrever (Personalizado para o Leo)
   const cargoElement = document.getElementById("cargo");
   const cargos = [
     "Estudante de ADS",
@@ -30,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   if (cargoElement) typeWriter();
 
-  // 2. Modal
   const cards = document.querySelectorAll(".project-item");
   const modal = document.getElementById("modal-projeto");
   const btnFechar = document.getElementById("modal-close-btn");
@@ -62,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target === modal) modal.classList.remove("visivel");
     });
 
-  // 3. Menu Mobile
   const btnMobile = document.getElementById("btn-mobile");
   const navLinks = document.getElementById("nav-links");
   if (btnMobile)
@@ -77,7 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
       )
     );
 
-  // 4. Dark Mode
   const themeButton = document.getElementById("theme-toggle");
   const body = document.body;
   if (localStorage.getItem("theme_leo") === "dark")
@@ -93,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 5. Formulário AJAX
   const form = document.getElementById("form-contato");
   const formStatus = document.getElementById("form-status");
   if (form) {
