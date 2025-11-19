@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Castro - Desenvolvedor</title>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <button id="theme-toggle" class="theme-btn-minimal">
+        <i class="bi bi-moon-stars-fill"></i>
+    </button>
+    
+    <div class="container">
+        
+        <header class="main-header">
+            <div class="header-content">
+                <img src="./assets/img/leo_perfil.jpg" alt="Foto de Leo Castro" class="profile-photo">
+                <div>
+                    <h1 id="nome-principal">Leo Castro</h1>
+                    <p id="cargo" class="typing-effect"></p>
+                </div>
+            </div>
+        </header>
+
+        <nav class="main-nav" id="main-nav">
+            <button id="btn-mobile" class="btn-mobile-minimal">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#sobre">Sobre Mim</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+
+        <section id="sobre" class="content-section">
+            <h2>Sobre Mim</h2>
+            <p>
+                Sou um estudante de Análise e Desenvolvimento de Sistemas focado em 
+                criar aplicações web eficientes. Tenho habilidade em implementar 
+                lógicas de negócio complexas e algoritmos, sempre buscando 
+                código limpo e performance.
+            </p>
+        </section>
+
+        <section id="projetos" class="content-section">
+            <h2>Projetos Acadêmicos</h2>
+            
+            <div class="project-list">
+                
+                <div class="project-item"
+                     data-titulo="Calculadora CLT vs. PJ"
+                     data-imagem="./assets/img/Imposto de Renda.png"
+                     data-descricao="Uma aplicação de análise financeira que compara regimes de contratação. O sistema implementa regras de negócio complexas, incluindo o cálculo progressivo e automatizado das tabelas de INSS e IRRF."
+                     data-tecnologias="JavaScript (Lógica), HTML5, CSS Minimalista"
+                     
+                     /* PREENCHA COM OS LINKS DO LEO DEPOIS */
+                     data-link-projeto="[LINK GITHUB PAGES DO IR]"
+                     data-link-github="[LINK GITHUB DO IR]">
+                    
+                    <img src="./assets/img/Imposto de Renda.png" alt="Preview Calculadora IR" class="project-thumb">
+                    <h3>Calculadora de Encargos CLT vs. PJ</h3>
+                    <p class="project-desc-short">Análise de regras de negócio e impostos progressivos.</p>
+                </div>
+
+                <div class="project-item"
+                     data-titulo="Calculadora com Parser RPN"
+                     data-imagem="./assets/img/Calculadora.png"   
+                     data-descricao="Uma calculadora funcional com parser de Notação Polonesa Reversa (RPN). Demonstra implementação de Pilhas e algoritmos de parsing."
+                     data-tecnologias="JavaScript (Algoritmos), HTML5, CSS Minimalista"
+                     
+                     /* PREENCHA COM OS LINKS DO LEO DEPOIS */
+                     data-link-projeto="[LINK GITHUB PAGES DA CALCULADORA]"
+                     data-link-github="[LINK GITHUB DA CALCULADORA]">
+                    
+                    <img src="./assets/img/Calculadora.png" alt="Preview Calculadora RPN" class="project-thumb">
+                    <h3>Calculadora com Parser RPN</h3>
+                    <p class="project-desc-short">Implementação de estruturas de dados e algoritmos.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="habilidades" class="content-section">
+            <h2>Habilidades</h2>
+            <ul class="skills-list-minimal">
+                <li>JavaScript (ES6+)</li>
+                <li>HTML5 Semântico</li>
+                <li>CSS3</li>
+                <li>Lógica de Programação</li>
+                <li>Estrutura de Dados</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </section>
+
+        <section id="contato" class="content-section">
+            <h2>Contato</h2>
+            <p>Envie uma mensagem.</p>
+            
+            <!-- Criar o formulário com o email para ativar a lógica -->
+            <form id="form-contato" action="https://formspree.io/f/mrbjeoje" method="POST" class="form-minimal">
+                <input type="text" name="name" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <textarea name="message" placeholder="Mensagem" rows="5" required></textarea>
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+            <div id="form-status"></div>
+
+            <!-- Preencher com os links dos perfis de cada rede social -->
+            <div class="contact-links">
+                <a href="https://github.com/leoclilton" class="contact-link" target="_blank">
+                    <i class="bi bi-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/leoclilton-castro/" class="contact-link" target="_blank">
+                    <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <div id="modal-projeto" class="modal-overlay">
+        <div class="modal-content">
+            <button id="modal-close-btn" class="modal-close">&times;</button>
+            <img id="modal-imagem" src="" alt="Preview do Projeto">
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-descricao"></p>
+            <p><strong>Tecnologias:</strong> <span id="modal-tecnologias"></span></p>
+            <div class="modal-links">
+                <a id="modal-link-projeto" href="#" target="_blank" class="btn">Ver Projeto</a>
+                <a id="modal-link-github" href="#" target="_blank" class="btn-outline">Ver Código</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
